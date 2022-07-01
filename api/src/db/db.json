@@ -1,7 +1,22 @@
 {
   "user": {
-    "id": "jBWMVGjm50l6LGwepDoty",
-    "username": "frontendmaster"
+    "id": "1",
+    "username": "John Doe"
   },
-  "pet": []
+  "pet": [
+    {
+      "id": "B63sKSyjAmDU9-sfIXV5n",
+      "createdAt": 1656711194469,
+      "name": "Leeto",
+      "type": "CAT",
+      "user": "1"
+    },
+    {
+      "id": "hFVPCXl-NKLnLgLEtLFNL",
+      "createdAt": 1656711566838,
+      "name": "Him",
+      "type": "DOG",
+      "user": "1"
+    }
+  ]
 }
