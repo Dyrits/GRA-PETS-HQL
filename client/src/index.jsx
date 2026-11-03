@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {createRoot} from "react-dom/client";
 import {BrowserRouter} from "react-router-dom";
-import {ApolloProvider} from "@apollo/react-hooks";
+import {ApolloProvider} from "@apollo/client";
 
 import "./index.css";
 
@@ -16,8 +16,5 @@ const Root = () => (
     </BrowserRouter>
 )
 
-ReactDOM.render(<Root/>, document.getElementById('app'))
+createRoot(document.getElementById('app')).render(<Root/>);
 
-if (module.hot) {
-    module.hot.accept()
-}
