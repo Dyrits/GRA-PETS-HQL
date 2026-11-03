@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { withRouter } from 'react-router'
+
 
 const Header = () =>
   <header>
@@ -13,4 +13,4 @@ const Header = () =>
     </div>
   </header>
 
-export default withRouter(Header)
+export default Header

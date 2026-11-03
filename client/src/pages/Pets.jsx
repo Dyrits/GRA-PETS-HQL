@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import gql from "graphql-tag";
-import { useQuery, useMutation } from "@apollo/react-hooks";
+import { useQuery, useMutation } from "@apollo/client";
 
 import PetsList from "../components/PetsList";
 import NewPetModal from "../components/NewPetModal";
 import Loader from "../components/Loader";
-import {MutationTuple} from "@apollo/react-hooks/lib/types";
+
 
 const PETS = gql`
   query Pets {
@@ -34,7 +34,7 @@ const ADD_PET = gql`
 export default function Pets () {
   const [modal, setModal] = useState(false);
   const queryResult = useQuery(PETS);
-  const { pets } = queryResult.data;
+  const pets = queryResult.data?.pets ?? [];
   const [addPet, mutationResult] = useMutation(ADD_PET);
 
   const onSubmit = async input => {
